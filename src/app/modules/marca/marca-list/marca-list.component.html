@@ -1,0 +1,32 @@
+<ol-template>
+    <ol-table-card title="Marcas cadastradas" showCadastrar="true" (clickCadastrar)="onClickCadastrar()">
+        <thead class=" text-primary">
+            <th>
+                ID
+            </th>
+            <th>
+                Nome
+            </th>
+            <th>
+
+            </th>
+        </thead>
+        <tbody *ngIf="marcaList">
+            <tr *ngFor="let marca of marcaList.content">
+                <td style="width: 15%;">
+                    {{ marca.id }}
+                </td>
+                <td style="width: 70%;">
+                    {{ marca.nome }}
+                </td>
+                <td style="width: 15%;">
+                    <button mat-stroked-button color='accent' class="mr-2" (click)="editar(marca.id)">Editar</button>
+
+                    <button mat-stroked-button color='warn' (click)="abreDialogExcluir(marca)">Excluir</button>
+                </td>
+            </tr>
+        </tbody>
+        <mat-paginator footer #paginator [length]="marcaList?.totalElements" [pageSizeOptions]="[10, 20, 50]" (page)="carregaPagina($event)">
+        </mat-paginator>
+    </ol-table-card>
+</ol-template>

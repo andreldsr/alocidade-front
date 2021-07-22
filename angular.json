@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "chriscabelos": {
+    "alocidade": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/chriscabelos",
+            "outputPath": "dist/alocidade",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,18 +71,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "chriscabelos:build"
+            "browserTarget": "alocidade:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "chriscabelos:build:production"
+              "browserTarget": "alocidade:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "chriscabelos:build"
+            "browserTarget": "alocidade:build"
           }
         },
         "test": {
@@ -120,18 +120,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "chriscabelos:serve"
+            "devServerTarget": "alocidade:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "chriscabelos:serve:production"
+              "devServerTarget": "alocidade:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "chriscabelos",
+  "defaultProject": "alocidade",
   "cli": {
     "analytics": "4b169d26-3b01-49b1-8195-4276db98a193"
   }

@@ -1,0 +1,36 @@
+<ol-template>
+  <ol-table-card title="Eventos cadastrados" showCadastrar="true" (clickCadastrar)="onClickCadastrar()">
+    <thead class=" text-primary">
+      <th>
+        ID
+      </th>
+      <th>
+        Nome
+      </th>
+      <th>
+        Data
+      </th>
+      <th>
+
+      </th>
+    </thead>
+    <tbody *ngIf="eventList">
+      <tr *ngFor="let event of eventList">
+        <td style="width: 15%;">
+          {{ event.id }}
+        </td>
+        <td style="width: 35%;">
+          {{ event.title }}
+        </td>
+        <td style="width: 35%;">
+          {{ event.date | date }}
+        </td>
+        <td style="width: 15%;">
+          <button mat-stroked-button color='accent' class="mr-2" (click)="editar(event.id)">Editar</button>
+
+          <button mat-stroked-button color='warn' (click)="abreDialogExcluir(event)">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </ol-table-card>
+</ol-template>
