@@ -8,7 +8,7 @@ import { Marca } from './../../model/marca';
 import { Page } from 'src/app/model/Page';
 import { PageEvent } from '@angular/material/paginator';
 
-const API_URL = environment.apiUrl + '/marca';
+const API_URL = environment.API_URL + '/marca';
 
 @Injectable({
   providedIn: 'root'

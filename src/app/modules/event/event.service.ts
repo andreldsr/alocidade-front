@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { EventDetailDTO, EventListDTO } from 'src/app/model/event';
 
-const API_URL = environment.apiUrl + '/events';
+const API_URL = environment.API_URL + '/events';
 
 @Injectable({
   providedIn: 'root'
